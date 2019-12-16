@@ -31,6 +31,7 @@ namespace OhMySky
         {
             RestService restService = new RestService();
             AsteroidData asteroidData = await restService.GetAsteroidData(GenerateRequestUri(Constants.NasaApiEndpoint));
+
             BindingContext = asteroidData;
         }
 
