@@ -23,7 +23,7 @@ namespace OhMySky
                 var response = await _client.GetAsync(query);
                 if (response.IsSuccessStatusCode)
                 {
-                    var content = await response.Content.ReadAsStringAsync();
+                    var content = await response.Content.ReadAsStringAsync();               
                     data = JsonConvert.DeserializeObject<AsteroidData>(content);
                 }
             }
@@ -36,3 +36,4 @@ namespace OhMySky
         }
     }
 }
+
