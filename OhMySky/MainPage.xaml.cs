@@ -22,7 +22,7 @@ namespace OhMySky
         public MainPage()
         {
             InitializeComponent();
-            CreateShader();
+            //CreateShader();
             GetAsteroidsData();
 
         }
@@ -31,6 +31,7 @@ namespace OhMySky
         {
             RestService restService = new RestService();
             AsteroidData asteroidData = await restService.GetAsteroidData(GenerateRequestUri(Constants.NasaApiEndpoint));
+
             BindingContext = asteroidData;
         }
 
@@ -38,14 +39,13 @@ namespace OhMySky
         {
             string requestUri = endpoint;
             requestUri += $"?start_date={GetCurrentDate()}&end_date={GetCurrentDate()}";
-            requestUri += $"&api_key={Constants.OpenWeatherMapAPIKey}";
+            requestUri += $"&api_key={Constants.APIKey}";
             return requestUri;
         }
 
         private string GetCurrentDate()
         {
-            DateTime dateTime = DateTime.UtcNow.Date;
-            return dateTime.ToString("yyyy-MM-dd");
+            return DateTime.UtcNow.Date.ToString("yyyy-MM-dd");
         }
 
         private void CreateShader()
