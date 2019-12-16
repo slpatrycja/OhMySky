@@ -22,7 +22,7 @@ namespace OhMySky
         public MainPage()
         {
             InitializeComponent();
-            //CreateShader();
+            CreateShader();
             GetAsteroidsData();
 
         }
@@ -59,6 +59,16 @@ namespace OhMySky
                 backgroundFillPaint.Shader = shader;
             }
         }
+        private void canvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
+        {
+            SKSurface surface = e.Surface;
+            SKCanvas canvas = surface.Canvas;
+            int width = e.Info.Width;
+            int height = e.Info.Height;
 
+            canvas.DrawPaint(backgroundFillPaint);
+            canvas.Translate(width / 2, height / 2);
+            canvas.Scale(Math.Min(width / 210f, height / 520f));
+        }
     }
 }
