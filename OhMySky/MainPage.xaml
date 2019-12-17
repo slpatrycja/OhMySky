@@ -5,7 +5,7 @@
     <Grid>
         <skia:SKCanvasView x:Name="canvasView" PaintSurface="canvasView_PaintSurface" />
         <StackLayout>,
-            <Button Command="{Binding GetAsteroidsData()}"
+            <Button Command="{Binding asteroidData}"
                 Text="Check today's asteroids"></Button>
         </StackLayout>
     </Grid>

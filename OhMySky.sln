@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OhMySky.Android", "OhMySky.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OhMySky", "OhMySky\OhMySky.csproj", "{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "UnitTestApp1", "UnitTestApp1\UnitTestApp1.fsproj", "{7186910D-92B3-41FA-A835-781D0B7B42B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITest1", "UITest1\UITest1.csproj", "{B19C892E-2628-4CA7-AD27-08D406A3B14B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,18 +16,17 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{57B8BA87-A7B5-451C-AA9C-F8C5EBD07CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57B8BA87-A7B5-451C-AA9C-F8C5EBD07CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B8BA87-A7B5-451C-AA9C-F8C5EBD07CC9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{57B8BA87-A7B5-451C-AA9C-F8C5EBD07CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57B8BA87-A7B5-451C-AA9C-F8C5EBD07CC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7186910D-92B3-41FA-A835-781D0B7B42B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7186910D-92B3-41FA-A835-781D0B7B42B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7186910D-92B3-41FA-A835-781D0B7B42B2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7186910D-92B3-41FA-A835-781D0B7B42B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7186910D-92B3-41FA-A835-781D0B7B42B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7186910D-92B3-41FA-A835-781D0B7B42B2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B19C892E-2628-4CA7-AD27-08D406A3B14B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19C892E-2628-4CA7-AD27-08D406A3B14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19C892E-2628-4CA7-AD27-08D406A3B14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19C892E-2628-4CA7-AD27-08D406A3B14B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
