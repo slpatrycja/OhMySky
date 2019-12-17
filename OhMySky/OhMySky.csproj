@@ -10,6 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ReactiveUI.Fody" Version="11.0.1" />
+    <PackageReference Include="ReactiveUI.Testing" Version="11.0.1" />
+    <PackageReference Include="ReactiveUI.XamForms" Version="11.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
@@ -23,13 +26,17 @@
     <EmbeddedResource Include="Background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AsteroidsDataPage.xaml.cs">
-      <DependentUpon>AsteroidsDataPage.xaml</DependentUpon>
+    <Compile Update="AsteroidDataPage.xaml.cs">
+      <DependentUpon>AsteroidDataPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Views\AsteroidsDataPage.xaml">
+    <EmbeddedResource Update="AsteroidDataPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>
