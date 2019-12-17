@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using OhMySky.Views;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System.IO;
@@ -23,31 +24,15 @@ namespace OhMySky
         {
             InitializeComponent();
             CreateShader();
-            GetAsteroidsData();
-
         }
 
-        public async void GetAsteroidsData()
+        private async void NavigateGetAsteroidsData_OnClicked(object sender, EventArgs e)
         {
-            RestService restService = new RestService();
-            AsteroidData asteroidData = await restService.GetAsteroidData(GenerateRequestUri(Constants.NasaApiEndpoint));
-
-            BindingContext = asteroidData;
+            await Navigation.PushAsync(new AsteroidsDataPage());
         }
 
-        string GenerateRequestUri(string endpoint)
-        {
-            string requestUri = endpoint;
-            requestUri += $"?start_date={GetCurrentDate()}&end_date={GetCurrentDate()}";
-            requestUri += $"&api_key={Constants.APIKey}";
-            return requestUri;
-        }
 
-        private string GetCurrentDate()
-        {
-            return DateTime.UtcNow.Date.ToString("yyyy-MM-dd");
-        }
-
+     
         private void CreateShader()
         {
             System.Reflection.Assembly assembly = GetType().GetTypeInfo().Assembly;

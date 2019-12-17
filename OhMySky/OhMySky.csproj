@@ -22,4 +22,14 @@
   <ItemGroup>
     <EmbeddedResource Include="Background.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\AsteroidsDataPage.xaml.cs">
+      <DependentUpon>AsteroidsDataPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AsteroidsDataPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
