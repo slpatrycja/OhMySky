@@ -1,6 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using OhMySky.Views;
+using OhMySky.ViewModels;
+
+
 
 namespace OhMySky
 {
