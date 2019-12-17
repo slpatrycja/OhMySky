@@ -1,8 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using OhMySky.Views;
-using OhMySky.ViewModels;
 
 
 
@@ -12,9 +10,9 @@ namespace OhMySky
     {
         public App()
         {
-            InitializeComponent();
+             MainPage = new NavigationPage(new MainPage());
 
-            MainPage = new MainPage();
+            InitializeComponent();
         }
 
         protected override void OnStart()
@@ -31,5 +29,6 @@ namespace OhMySky
         {
             // Handle when your app resumes
         }
+
     }
 }

@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using OhMySky.Views;
-using OhMySky.ViewModels;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System.IO;
@@ -27,9 +25,9 @@ namespace OhMySky
             CreateShader();
         }
 
-        private async void NavigateGetAsteroidsData_OnClicked(object sender, EventArgs e)
+        private async void NavigateGetAsteroidData_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AsteroidsDataPage());
+            await Navigation.PushAsync(new AsteroidDataPage());
         }
 
 
