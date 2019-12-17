@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using OhMySky.Views;
+using OhMySky.ViewModels;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System.IO;
