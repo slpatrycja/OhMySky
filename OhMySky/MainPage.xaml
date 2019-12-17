@@ -4,8 +4,9 @@
              mc:Ignorable="d" x:Class="OhMySky.MainPage">
     <Grid>
         <skia:SKCanvasView x:Name="canvasView" PaintSurface="canvasView_PaintSurface" />
-        <StackLayout>
-            <Button Text="Check today's asteroids" ></Button>
+        <StackLayout>,
+            <Button Command="{Binding GetAsteroidsData()}"
+                Text="Check today's asteroids"></Button>
         </StackLayout>
     </Grid>
 </ContentPage>
