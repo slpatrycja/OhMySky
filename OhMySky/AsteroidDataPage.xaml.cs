@@ -8,7 +8,7 @@ namespace OhMySky
 		public AsteroidDataPage()
 		{
 			InitializeComponent();
-			BindingContext = new AsteroidDataViewModel();
+            BindingContext = new AsteroidDataViewModel().AsteroidData;
 		}
 	}
 }

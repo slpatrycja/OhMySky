@@ -12,7 +12,7 @@ namespace OhMySky
 
     public class NearEarthObjects
     {
-        [JsonProperty("2019-12-16")]
+        [JsonProperty("2019-12-18")]
         public NearEarthObject[] NearEarthObject { get; set; }
     }
 
