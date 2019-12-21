@@ -7,8 +7,7 @@
             <Label Text="Todays Asteroids:"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding AsteroidData.NearEarthObjects.NearEarthObject[0].Id}" />
-            <ListView ItemsSource="{Binding AsteroidDataArray}" RowHeight="100">
+            <ListView ItemsSource="{Binding Asteroids}" RowHeight="100">
                 <!--<ListView.Behaviors>
                     <acr:ItemTappedCommandBehavior Command="{Binding SelectDevice}" />
                 </ListView.Behaviors>-->
@@ -29,7 +28,6 @@
 
                                     <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="15" />
                                     <Label Text="{Binding Id}" Grid.Row="0" Grid.Column="1" TextColor="Red" />
-
                                     <Label Text="{Binding IsPotentiallyHazardous}" Grid.Row="2" Grid.Column="0" />
                                 </Grid>
                             </ViewCell.View>

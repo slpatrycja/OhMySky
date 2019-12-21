@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace OhMySky
@@ -8,7 +9,12 @@ namespace OhMySky
 		public AsteroidDataPage()
 		{
 			InitializeComponent();
-            BindingContext = new AsteroidDataViewModel().AsteroidData;
+            BindingContext = new AsteroidDataViewModel();
 		}
-	}
+
+        private Task GetAsteroidData()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

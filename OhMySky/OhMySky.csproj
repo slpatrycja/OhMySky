@@ -26,6 +26,9 @@
     <EmbeddedResource Include="Background.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Asteroid.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="AsteroidDataPage.xaml.cs">
       <DependentUpon>AsteroidDataPage.xaml</DependentUpon>
     </Compile>

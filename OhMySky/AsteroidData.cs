@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 
 namespace OhMySky
@@ -8,11 +9,16 @@ namespace OhMySky
     {
         [JsonProperty("near_earth_objects")]
         public NearEarthObjects NearEarthObjects { get; set; }
+
+        public static implicit operator ObservableCollection<object>(AsteroidData v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class NearEarthObjects
     {
-        [JsonProperty("2019-12-18")]
+        [JsonProperty("2019-12-21")]
         public NearEarthObject[] NearEarthObject { get; set; }
     }
 
