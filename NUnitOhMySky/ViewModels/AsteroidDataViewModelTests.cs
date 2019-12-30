@@ -13,7 +13,6 @@ namespace NUnitOhMySky.Tests
         public void GetDataTest()
         {
             var asteroidDataViewModel = new AsteroidDataViewModel();
-            Assert.AreEqual(asteroidDataViewModel.GetAsteroidData, );
             Assert.IsNotNull(asteroidDataViewModel.GetAsteroidData());
         }
         [Test]
