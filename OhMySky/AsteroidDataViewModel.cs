@@ -31,9 +31,13 @@ namespace OhMySky
             {
                 var record = new iAsteroid
                 {
-                    id = asteroid.Id,
+                    Id = asteroid.Id,
                     Name = asteroid.Name,
-                    IsPotentiallyHazardous = asteroid.IsPotentiallyHazardous
+                    IsPotentiallyHazardous = asteroid.IsPotentiallyHazardous,
+                    EstimatedDiameter = asteroid.EstimatedDiameter.KilometersData.EstimatedDiameterMax,
+                    CloseApproachDate = asteroid.CloseApproachData[0].CloseApproachDate,
+                    RelativeVelocity = asteroid.CloseApproachData[0].RelativeVelocity.KilometersPerSecond,
+                    AbsoluteMagnitudeH = asteroid.AbsoluteMagnitudeH
                 };
 
                 Asteroids.Add(record);

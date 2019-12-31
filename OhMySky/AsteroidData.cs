@@ -18,7 +18,7 @@ namespace OhMySky
 
     public class NearEarthObjects
     {
-        [JsonProperty("2019-12-21")]
+        [JsonProperty("2019-12-31")]
         public NearEarthObject[] NearEarthObject { get; set; }
     }
 
@@ -41,7 +41,7 @@ namespace OhMySky
 
         [JsonProperty("estimated_diameter")]
         public EstimatedDiameter EstimatedDiameter { get; set; }
-
+       
         [JsonProperty("is_potentially_hazardous_asteroid")]
         public bool IsPotentiallyHazardous { get; set; }
 
