@@ -1,10 +1,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OhMySky.Android", "OhMySky.Android\OhMySky.Android.csproj", "{57B8BA87-A7B5-451C-AA9C-F8C5EBD07CC9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OhMySky", "OhMySky\OhMySky.csproj", "{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitOhMySky.Tests", "NUnitOhMySky\NUnitOhMySky.Tests.csproj", "{4397502C-CF78-4915-B67E-5A365FF800CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFF3094F-7EFD-49A6-ABDB-CB384D47AF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4397502C-CF78-4915-B67E-5A365FF800CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4397502C-CF78-4915-B67E-5A365FF800CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4397502C-CF78-4915-B67E-5A365FF800CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4397502C-CF78-4915-B67E-5A365FF800CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
