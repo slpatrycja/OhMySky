@@ -7,19 +7,7 @@ namespace OhMySky
 {
     public class AsteroidData
     {
-        [JsonProperty("near_earth_objects")]
-        public NearEarthObjects NearEarthObjects { get; set; }
-
-        public static implicit operator ObservableCollection<object>(AsteroidData v)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public class NearEarthObjects
-    {
-        [JsonProperty("2020-01-01")]
-        public NearEarthObject[] NearEarthObject { get; set; }
+        public IList<NearEarthObject> NearEarthObjects { get; set; }
     }
 
     public class NearEarthObject
@@ -41,13 +29,12 @@ namespace OhMySky
 
         [JsonProperty("estimated_diameter")]
         public EstimatedDiameter EstimatedDiameter { get; set; }
-       
+
         [JsonProperty("is_potentially_hazardous_asteroid")]
         public bool IsPotentiallyHazardous { get; set; }
 
         [JsonProperty("close_approach_data")]
         public CloseApproachData[] CloseApproachData { get; set; }
-
     }
 
     public class EstimatedDiameter
