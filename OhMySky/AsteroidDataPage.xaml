@@ -44,10 +44,10 @@
 
                                             <Label.Triggers>
                                                 <DataTrigger TargetType="Label" Binding="{Binding IsPotentiallyHazardous}" Value="True">
-                                                    <Setter Property="TextColor" Value="#3CB371" />
+                                                    <Setter Property="TextColor" Value="#B22222" />
                                                 </DataTrigger>
                                                 <DataTrigger TargetType="Label" Binding="{Binding IsPotentiallyHazardous}" Value="False">
-                                                    <Setter Property="TextColor" Value="#B22222" />
+                                                    <Setter Property="TextColor" Value="#3CB371" />
                                                 </DataTrigger>
                                             </Label.Triggers>
                                         </Label> 
