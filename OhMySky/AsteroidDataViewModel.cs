@@ -16,7 +16,7 @@ namespace OhMySky
     public class AsteroidDataViewModel : ViewModel
     {
         public Command TextCommand { get; }
-        public AsteroidData AsteroidData { get; set; }
+        public AsteroidData AsteroidData { get; set; }
         public AsteroidDataViewModel()
         {
             Task.Run(async () => { await GetAsteroidData(); });
@@ -26,9 +26,10 @@ namespace OhMySky
         public async Task GetAsteroidData()
         {
             RestService restService = new RestService();
-            AsteroidData = await restService.GetAsteroidData(GenerateRequestUri(Constants.NasaApiEndpoint));
-            foreach(var asteroid in AsteroidData.NearEarthObjects.NearEarthObject)
+            AsteroidData = await restService.GetAsteroidData(GenerateRequestUri(Constants.NasaApiEndpoint), GetCurrentDate());
+            foreach (var asteroid in AsteroidData.NearEarthObjects)
             {
+                Console.WriteLine(asteroid);
                 var record = new iAsteroid
                 {
                     Id = asteroid.Id,

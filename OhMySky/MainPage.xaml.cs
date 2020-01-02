@@ -29,8 +29,6 @@ namespace OhMySky
         {
             await Navigation.PushAsync(new AsteroidDataPage());
         }
-
-
      
         private void CreateShader()
         {
