@@ -20,8 +20,9 @@ namespace OhMySky
         public static string DatabasePath
         {
             get
-            {
+            { 
                 var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                Console.WriteLine(basePath);
                 return Path.Combine(basePath, DatabaseFilename);
             }
         }

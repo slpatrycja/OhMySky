@@ -14,8 +14,6 @@ namespace OhMySky
 
         async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Console.WriteLine("Selected");
-
             if (e.SelectedItem != null)
             {
                 await Navigation.PushAsync(new AsteroidItemPage

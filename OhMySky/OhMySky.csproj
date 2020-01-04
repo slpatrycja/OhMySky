@@ -36,7 +36,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Models\" />
     <Folder Include="Data\" />
@@ -44,8 +43,11 @@
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AsteroidItemPage.xaml.cs">
-      <DependentUpon>AsteroidItemPage.xaml</DependentUpon>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AsteroidItemPage.xaml.cs">
+      <DependentUpon>Views\AsteroidItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FavouriteAsteroidsPage.xaml.cs">
+      <DependentUpon>FavouriteAsteroidsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

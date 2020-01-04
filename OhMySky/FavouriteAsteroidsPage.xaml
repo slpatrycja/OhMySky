@@ -1,11 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OhMySky.AsteroidDataPage"
-             Title="Asteroids list">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="OhMySky.FavouriteAsteroidsPage"
+    Title="Favourite asteroids">
+
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding Asteroids}" RowHeight="180" ItemSelected="OnListViewDeviceSelected">
+            <ListView ItemsSource="{Binding FavouriteAsteroids}" RowHeight="180">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -36,6 +36,7 @@ namespace OhMySky
 
         public Task<List<Asteroid>> GetItemsAsync()
         {
+            Console.WriteLine("Getting asteroids");
             return Database.Table<Asteroid>().ToListAsync();
         }
 
