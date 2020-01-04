@@ -1,10 +1,12 @@
-﻿using System;
-namespace OhMySky
+﻿using SQLite;
+
+namespace OhMySky.Models
 {
-    public class iAsteroid
+    public class Asteroid : iAsteroid
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string Name { get; set; }
-        public string Id { get; set; }
         public bool IsPotentiallyHazardous { get; set; }
         public double EstimatedDiameter { get; set; }
         public double AbsoluteMagnitudeH { get; set; }

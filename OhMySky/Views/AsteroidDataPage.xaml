@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OhMySky.AsteroidDataPage"
+             Title="Asteroids list">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Asteroids}" RowHeight="180" ItemSelected="OnListViewDeviceSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90" />
+                                        <RowDefinition Height="15" />
+                                        <RowDefinition Height="15" />
+                                        <RowDefinition Height="15" />
+                                        <RowDefinition Height="15" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    
+                                    <Frame
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HeightRequest="70"
+                                        WidthRequest="70"
+                                        CornerRadius="35"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Start"
+                                        Margin="15,10,15,10"
+                                        Padding="0"
+                                        BackgroundColor="White">
+
+                                        <Label Text="{Binding Name}"
+                                               FontSize="10"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center" 
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center">
+
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding IsPotentiallyHazardous}" Value="True">
+                                                    <Setter Property="TextColor" Value="#B22222" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Label" Binding="{Binding IsPotentiallyHazardous}" Value="False">
+                                                    <Setter Property="TextColor" Value="#3CB371" />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label> 
+                                    </Frame>
+                                    <Label Text="{Binding EstimatedDiameter, StringFormat='Diameter (km): {0}'}" Grid.Row="0" Grid.Column="1" FontSize="10" VerticalOptions="End" Margin="0,0,5,0"/>
+                                    <Label Text="{Binding AbsoluteMagnitudeH, StringFormat='Magnitude (km): {0}'}" Grid.Row="1" Grid.Column="1" FontSize="10" Margin="0,0,5,0"/>
+                                    <Label Text="{Binding RelativeVelocity, StringFormat='Velocity (km/s): {0}'}" Grid.Row="2" Grid.Column="1" FontSize="10" Margin="0,0,5,0"/>
+                                    <Label Text="{Binding CloseApproachDate, StringFormat='Close approach date: {0}'}" Grid.Row="3" Grid.Column="1" FontSize="10" Margin="0,0,5,0"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
