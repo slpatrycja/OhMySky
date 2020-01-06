@@ -6,6 +6,7 @@
         <skia:SKCanvasView x:Name="canvasView" PaintSurface="canvasView_PaintSurface" />
         <StackLayout>
             <Button Text="Check today's asteroids" Clicked="NavigateGetAsteroidData_OnClicked" ></Button>
+            <Button Text="NASA picture of the day" Clicked="NavigateGetPictureData_OnClicked" ></Button>
         </StackLayout>
     </Grid>
 </ContentPage>
