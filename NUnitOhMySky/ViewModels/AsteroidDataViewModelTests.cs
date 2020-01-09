@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 using OhMySky;
 using System.Collections;
+using Moq;
+using System.Threading.Tasks;
 
 namespace NUnitOhMySky.Tests
 {
@@ -11,14 +13,18 @@ namespace NUnitOhMySky.Tests
     class AsteroidDataViewModelTests
     {
         [Test]
-        public void GetDataTest()
+        public void CheckAsteroidsDataType()
         {
+            Mock<IList> mockIList = new Mock<IList>();
             var asteroidDataViewModel = new AsteroidDataViewModel();
             Assert.That(asteroidDataViewModel.Asteroids, Is.InstanceOf<IList>());
         }
         [Test]
-        public void GenerateUriTest()
+        public async Task GetAsteroidData()
         {
+            var asteroidDataViewModel = new AsteroidDataViewModel();
+            await asteroidDataViewModel.GetAsteroidData();
+            Assert.That(asteroidDataViewModel.Asteroids[0], Is.EqualTo("s"));
 
         }
     }
