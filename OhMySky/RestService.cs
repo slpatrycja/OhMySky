@@ -48,6 +48,28 @@ namespace OhMySky
 
             return data;
         }
+
+        public async Task<PictureData> GetPictureOfTheDay(string query)
+        {
+            PictureData data = new PictureData();
+
+            try
+            {
+                var response = await _client.GetAsync(query);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    JObject result = JObject.Parse(content);
+                    data = result.ToObject<PictureData>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("\t\tERROR {0}", ex);
+            }
+
+            return data;
+        }
     }
 }
 

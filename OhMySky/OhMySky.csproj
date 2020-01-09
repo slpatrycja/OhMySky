@@ -27,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Asteroid.cs" />
+    <Compile Remove="AsteroidDataPage %28copy%29.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="AsteroidDataPage.xaml.cs">
