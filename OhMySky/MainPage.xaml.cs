@@ -35,6 +35,11 @@ namespace OhMySky
             await Navigation.PushAsync(new FavouriteAsteroidsPage());
         }
 
+        private async void NavigateGetPictureData_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PictureOfTheDayPage());
+        }
+
         private void CreateShader()
         {
             System.Reflection.Assembly assembly = GetType().GetTypeInfo().Assembly;

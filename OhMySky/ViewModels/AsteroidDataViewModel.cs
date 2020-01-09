@@ -25,7 +25,6 @@ namespace OhMySky
             AsteroidData = await restService.GetAsteroidData(GenerateRequestUri(Constants.NasaApiEndpoint), GetCurrentDate());
             foreach (var asteroid in AsteroidData.NearEarthObjects)
             {
-                Console.WriteLine(asteroid.Id);
                 var record = new Asteroid
                 {
                     Id = Convert.ToInt32(asteroid.Id),

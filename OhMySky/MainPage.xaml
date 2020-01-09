@@ -11,6 +11,7 @@
         <StackLayout>
             <Button Text="Check today's asteroids" Clicked="NavigateGetAsteroidData_OnClicked" ></Button>
             <Button Text="Favourite asteroids" Clicked="NavigateGetFaverouiteAsterois_OnClicked" ></Button>
+            <Button Text="NASA picture of the day" Clicked="NavigateGetPictureData_OnClicked" ></Button>
         </StackLayout>
     </Grid>
 </ContentPage>
