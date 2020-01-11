@@ -1,4 +1,4 @@
-﻿namespace OhMySky
+﻿namespace OhMySky.Interfaces
 {
     interface iAsteroid
     {

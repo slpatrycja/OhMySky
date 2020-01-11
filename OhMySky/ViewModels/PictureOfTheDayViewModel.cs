@@ -6,6 +6,7 @@ using ReactiveUI.Fody.Helpers;
 using System.Reactive.Disposables;
 using System.Windows.Input;
 using OhMySky.Infrastructure;
+using OhMySky.Interfaces;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;

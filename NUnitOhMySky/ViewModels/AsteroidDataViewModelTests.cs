@@ -7,6 +7,7 @@ using System.Collections;
 using Moq;
 using Bogus;
 using System.Threading.Tasks;
+using OhMySky.Models;
 
 namespace NUnitOhMySky.Tests
 {
@@ -24,8 +25,8 @@ namespace NUnitOhMySky.Tests
         public async Task GetAsteroidData()
         {
 
-            var testAsteroid = new Faker<iAsteroid>()
-            .RuleFor(o => o.Id, f => f.Lorem.Word())
+            var testAsteroid = new Faker<Asteroid>()
+            .RuleFor(o => o.Id, f => f.Random.Number(0,200))
             .RuleFor(o => o.Name, f => f.Lorem.Word())
             .RuleFor(o => o.IsPotentiallyHazardous, f => f.Random.Bool())
             .RuleFor(o => o.EstimatedDiameter, f => f.Random.Double())
