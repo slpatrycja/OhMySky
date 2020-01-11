@@ -47,14 +47,7 @@ namespace OhMySky
 
         public Task<int> SaveItemAsync(Asteroid item)
         {
-            if (item.Id != 0)
-            {
-                return Database.UpdateAsync(item);
-            }
-            else
-            {
-                return Database.InsertAsync(item);
-            }
+            return Database.InsertAsync(item);
         }
 
         public Task<int> DeleteItemAsync(Asteroid item)
