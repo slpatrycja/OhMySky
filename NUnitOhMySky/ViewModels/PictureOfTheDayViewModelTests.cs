@@ -30,7 +30,6 @@ namespace NUnitOhMySky.Tests
             Assert.That(fetchedPicture, Has.Property("Title").And.Property("Title").InstanceOf(bogusPicture.Title.GetType()));
         }
 
-
     }
         
 }

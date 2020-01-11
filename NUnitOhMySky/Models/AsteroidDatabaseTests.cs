@@ -44,7 +44,6 @@ namespace NUnitOhMySky.Tests
             Assert.That(await asteroidDatabase.GetItemAsync(bogusAsteroid.Id), Is.TypeOf(typeof(Asteroid)));
         }
 
-
     }
         
 }

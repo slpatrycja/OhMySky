@@ -33,7 +33,6 @@ namespace NUnitOhMySky.Tests
             Assert.That(firstFetchedAsteroid, Has.Property("AbsoluteMagnitudeH").And.Property("AbsoluteMagnitudeH").InstanceOf(bogusAsteroid.AbsoluteMagnitudeH.GetType()));
         }
 
-
     }
         
 }
