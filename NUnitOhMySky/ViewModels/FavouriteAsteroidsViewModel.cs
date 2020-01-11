@@ -11,10 +11,10 @@ using OhMySky.Models;
 namespace NUnitOhMySky.Tests
 {
     [TestFixture]
-    class AsteroidDataViewModelTests
+    class FavouriteAsteroidsViewModelTests
     {
         [Test]
-        public void CheckAsteroidListDataType()
+        public void CheckDatabaseConnection()
         {
             var asteroidDataViewModel = new AsteroidDataViewModel();
             Assert.That(asteroidDataViewModel.Asteroids, Is.InstanceOf<IList>().And.Empty);
