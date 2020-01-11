@@ -30,6 +30,11 @@ namespace OhMySky
             await Navigation.PushAsync(new AsteroidDataPage());
         }
 
+        private async void NavigateGetFaverouiteAsterois_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FavouriteAsteroidsPage());
+        }
+
         private async void NavigateGetPictureData_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PictureOfTheDayPage());

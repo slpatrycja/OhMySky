@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading.Tasks;
+using OhMySky.Models;
 using Xamarin.Forms;
 
 namespace OhMySky
@@ -7,14 +7,20 @@ namespace OhMySky
 	public partial class AsteroidDataPage : ContentPage
 	{
 		public AsteroidDataPage()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
             BindingContext = new AsteroidDataViewModel();
 		}
 
-        private Task GetAsteroidData()
+        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new AsteroidItemPage
+                {
+                    BindingContext = e.SelectedItem as Asteroid
+                });
+            }
         }
     }
 }

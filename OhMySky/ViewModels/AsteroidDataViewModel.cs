@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using ReactiveUI;
-using ReactiveUI.Fody.Helpers;
-using System.Reactive.Disposables;
-using System.Windows.Input;
 using OhMySky.Infrastructure;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
+using OhMySky.Models;
 
 namespace OhMySky
 {
@@ -29,9 +25,9 @@ namespace OhMySky
             AsteroidData = await restService.GetAsteroidData(GenerateRequestUri(Constants.NasaApiEndpoint), GetCurrentDate());
             foreach (var asteroid in AsteroidData.NearEarthObjects)
             {
-                var record = new iAsteroid
+                var record = new Asteroid
                 {
-                    Id = asteroid.Id,
+                    Id = Convert.ToInt32(asteroid.Id),
                     Name = asteroid.Name,
                     IsPotentiallyHazardous = asteroid.IsPotentiallyHazardous,
                     EstimatedDiameter = asteroid.EstimatedDiameter.KilometersData.EstimatedDiameterMax,
@@ -57,7 +53,7 @@ namespace OhMySky
             return DateTime.UtcNow.Date.ToString("yyyy-MM-dd");
         }
 
-        public IList<iAsteroid> Asteroids { get; private set; }
-        ObservableCollection<iAsteroid> asteroids = new ObservableCollection<iAsteroid>();
+        public IList<Asteroid> Asteroids { get; private set; }
+        ObservableCollection<Asteroid> asteroids = new ObservableCollection<Asteroid>();
     }
 }
