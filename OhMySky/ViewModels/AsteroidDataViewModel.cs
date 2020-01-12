@@ -37,6 +37,7 @@ namespace OhMySky
                 };
 
                 Asteroids.Add(record);
+               
             }
         }
 

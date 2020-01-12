@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using OhMySky.Interfaces;
 
 namespace OhMySky.Models
 {

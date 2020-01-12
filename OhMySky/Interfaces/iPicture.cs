@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace OhMySky
+namespace OhMySky.Interfaces
 {
     public class iPicture : INotifyPropertyChanged
     {
