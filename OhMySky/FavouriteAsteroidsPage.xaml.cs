@@ -9,10 +9,16 @@ namespace OhMySky
         public FavouriteAsteroidsPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
             BindingContext = new FavouriteAsteroidsViewModel();
         }
 
-        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void OnListFavorutieItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
             {
