@@ -5,13 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              mc:Ignorable="d" x:Class="OhMySky.MainPage"
-             Title="Oh My Sky">
+             Title="🚀OhMySky">
     <Grid>
         <skia:SKCanvasView x:Name="canvasView" PaintSurface="canvasView_PaintSurface" />
         <StackLayout>
-            <Button Text="Check today's asteroids" Clicked="NavigateGetAsteroidData_OnClicked" ></Button>
-            <Button Text="Favourite asteroids" Clicked="NavigateGetFaverouiteAsterois_OnClicked" ></Button>
-            <Button Text="NASA picture of the day" Clicked="NavigateGetPictureData_OnClicked" ></Button>
+            <Button Text="Today's asteroids" BackgroundColor="White" Margin="10" Opacity="0.7" Clicked="NavigateGetAsteroidData_OnClicked" ></Button>
+            <Button Text="Favourite asteroids" BackgroundColor="White" Margin="10" Opacity="0.7" Clicked="NavigateGetFaverouiteAsterois_OnClicked" ></Button>
+            <Button Text="NASA pic of the day" BackgroundColor="White" Margin="10" Opacity="0.7" Clicked="NavigateGetPictureData_OnClicked" ></Button>
         </StackLayout>
     </Grid>
 </ContentPage>
