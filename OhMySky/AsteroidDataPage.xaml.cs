@@ -1,5 +1,4 @@
-﻿using System;
-using OhMySky.Models;
+﻿using OhMySky.Models;
 using Xamarin.Forms;
 
 namespace OhMySky
