@@ -15,7 +15,14 @@ namespace OhMySky
         {
             var asteroid = (Asteroid)BindingContext;
             await App.Database.SaveItemAsync(asteroid);
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new AsteroidDataPage());
+        }
+
+        async void removeFromFavourites(object sender, EventArgs e)
+        {
+            var asteroid = (Asteroid)BindingContext;
+            await App.Database.DeleteItemAsync(asteroid);
+            await Navigation.PushAsync(new FavouriteAsteroidsPage());
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using DynamicData;
 using OhMySky.Models;
@@ -22,7 +23,7 @@ namespace OhMySky.ViewModels
             var data = await App.Database.GetItemsAsync();
             foreach (var asteroid in data)
             {
-                FavouriteAsteroids.Add(data);
+                if (!FavouriteAsteroids.Any(favAsteroid => favAsteroid.Id == asteroid.Id)) FavouriteAsteroids.Add(asteroid);
             }
         }
 
