@@ -11,9 +11,10 @@ namespace OhMySky
             InitializeComponent();
         }
 
-        async void addToFavourite(object sender, EventArgs e)
+        async void addToFavourites(object sender, EventArgs e)
         {
             var asteroid = (Asteroid)BindingContext;
+            asteroid.IsFavourite = true;
             await App.Database.SaveItemAsync(asteroid);
             await Navigation.PopAsync();
         }
