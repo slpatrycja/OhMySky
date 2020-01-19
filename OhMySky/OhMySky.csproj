@@ -40,6 +40,7 @@
   <ItemGroup>
     <Folder Include="Infrastructure\" />
     <Folder Include="Data\" />
+    <Folder Include="Examples\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AsteroidItemPage.xaml.cs">
