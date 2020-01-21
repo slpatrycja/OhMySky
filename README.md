@@ -1,6 +1,7 @@
 # OhMySky
 Application has been created to track and display asteroids via API resource.
 Application uses MVVM convention to keep proper structure for scaling ability.
+## .apk file is compressed in .zip due to 25Mb limit for files on GitHub
 
 
 Usage
